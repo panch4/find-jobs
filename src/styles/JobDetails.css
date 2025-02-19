@@ -142,3 +142,7 @@
 .view-page-link:hover {
   color: #b4b2e6;
 }
+html, body {
+  overflow-x: hidden;
+}
+

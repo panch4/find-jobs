@@ -1,7 +1,7 @@
 /* Layout container */
 .app-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Ensure sidebar and main content align horizontally */
   height: 100vh;
   overflow: hidden;
 }
@@ -24,14 +24,14 @@
 
 /* Main Content */
 .main-content {
-  margin-left: 250px;
+  margin-left: 250px; /* Ensures it starts after the sidebar */
   display: flex;
   flex-direction: column;
   flex: 1;
   background-color: #ffffff;
   overflow-y: auto;
   padding: 20px;
-  height: calc(100vh - 60px); /* Adjust height to fit footer */
+  height: calc(100vh - 90px); /* Adjusted to fit the footer */
 }
 
 /* Content Area */
@@ -39,7 +39,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px; /* Prevent content from overlapping footer */
+  padding-bottom: 90px; /* Ensures content does not overlap footer */
 }
 
 /* Job Layout */
@@ -51,14 +51,29 @@
 }
 
 /* Footer Styling */
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.footer-container {
+  width: calc(100% - 250px); /* Footer starts after sidebar */
+  margin-left: 250px; /* Align with main content */
   background-color: black;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  height: 180px; /* Fixed footer height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Hide footer when not needed */
+.footer-hidden {
+  transform: translateY(100%);
+}
+
+/* Prevent content from being hidden under the footer */
+body {
+  padding-bottom: 200px; /* Ensures no overlap */
 }

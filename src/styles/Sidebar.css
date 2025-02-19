@@ -19,6 +19,7 @@
   font-weight: 400;
   color: #040a14;
   border-bottom: 1px solid #ccc;
+  
 }
 
 .menu-section {
@@ -78,7 +79,7 @@
   align-items: center;
   border-top: 1px solid #ccc;
   width: 272px;
-  height:120px;
+  height:80px;
   
 }
 
@@ -108,4 +109,7 @@
   font-weight: 400;
   color: #7c8493;
   font-size: 14px;
+}
+html, body {
+  overflow-x: hidden;
 }

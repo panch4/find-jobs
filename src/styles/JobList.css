@@ -97,3 +97,7 @@
   background-color: #0c0f13;
   color: #ece9e9;
 }
+html, body {
+  overflow-x: hidden;
+}
+

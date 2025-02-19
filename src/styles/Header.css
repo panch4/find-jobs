@@ -89,4 +89,8 @@
     flex: 1;
     min-width: 100%; /* Full width for smaller screens */
   }
+  html, body {
+    overflow-x: hidden;
+}
+
 }
